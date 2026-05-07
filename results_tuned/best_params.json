@@ -1,0 +1,36 @@
+{
+  "LightGBM": {
+    "n_estimators": 334,
+    "learning_rate": 0.027589685667154456,
+    "num_leaves": 15,
+    "min_child_samples": 27,
+    "subsample": 0.660769563406926,
+    "colsample_bytree": 0.9464420474351146,
+    "reg_alpha": 0.002517905522290888,
+    "reg_lambda": 0.003532862623846899,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "XGBoost": {
+    "n_estimators": 106,
+    "learning_rate": 0.02401743695941468,
+    "max_depth": 3,
+    "subsample": 0.7116464444554983,
+    "colsample_bytree": 0.8565122554129693,
+    "reg_alpha": 0.019234016861260674,
+    "reg_lambda": 0.2884877306272456,
+    "min_child_weight": 15,
+    "gamma": 0.15395887147435566,
+    "random_state": 42,
+    "verbosity": 0
+  },
+  "RandomForest": {
+    "n_estimators": 442,
+    "max_depth": 4,
+    "min_samples_leaf": 2,
+    "max_features": 0.4432023150108458,
+    "min_samples_split": 15,
+    "random_state": 42,
+    "n_jobs": -1
+  }
+}

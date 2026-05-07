@@ -1,0 +1,17 @@
+============================================================
+V4 RESULTS — TUNED + INTERACTION FEATURES
+============================================================
+
+Features       : 37 (26 base + 11 interaction)
+Best window    : 24M
+Optuna trials  : 40 per model
+Total folds    : 132
+
+  LightGBM          +0.0795   65.9%      63.0%  +0.0300  +0.0278    +0.0120  Δ +0.0153
+  XGBoost           +0.0865   68.9%      64.5%  +0.0328  +0.0307    +0.0145  Δ +0.0133
+  RandomForest      +0.0987   69.7%      64.7%  +0.0320  +0.0299    +0.0165  Δ +0.0092
+  Ensemble          +0.0921   67.4%      63.8%  +0.0320  +0.0299    +0.0147  Δ +0.0125
+
+Nifty benchmark : +0.0216/month
+Ensemble Mean IC: +0.0921
+IC=0.0921 — close. Consider Nifty 100 expansion next.
