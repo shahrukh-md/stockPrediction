@@ -1,0 +1,50 @@
+============================================================
+V4 FIXED WALK-FORWARD RESULTS SUMMARY
+============================================================
+Total folds       : 120
+Training window   : 36 months (rolling)
+Transaction cost  : 0.3% round-trip
+Features          : 26
+Portfolio         : Top 10 long / Bottom 10 short
+
+  LightGBM          +0.0446   58.3%      61.9%    +0.0275  +0.0254    +0.0034
+  XGBoost           +0.0648   64.2%      62.9%    +0.0309  +0.0288    +0.0100
+  RandomForest      +0.0797   67.5%      63.2%    +0.0320  +0.0299    +0.0136
+  Ensemble          +0.0655   63.3%      62.0%    +0.0301  +0.0280    +0.0094
+
+============================================================
+KNOWN LIMITATIONS (important disclosures)
+============================================================
+
+1. SURVIVORSHIP BIAS (High severity)
+   Universe = current Nifty 50 constituents only.
+   Stocks removed from Nifty 50 due to poor performance
+   are absent from training data. Backtest returns are
+   likely overstated as a result.
+
+2. LOOK-AHEAD BIAS IN FUNDAMENTALS (Medium-High severity)
+   Fundamental features (PE, profit_margin, etc.) are
+   point-in-time snapshots, not timestamped quarterly data.
+   Quarterly earnings are published 45-60 days after quarter
+   end. Model may have 'seen' data not available at trade time.
+
+3. BACKTEST OVERFITTING (High severity)
+   Feature selection, window length, and portfolio size were
+   all chosen by observing this dataset. Forward performance
+   will likely be lower than backtest results.
+
+4. TRANSACTION COSTS (Modelled — 0.3% round-trip)
+   Brokerage + STT + exchange + impact cost approximated.
+   Actual costs may vary by broker and stock liquidity.
+
+5. SMALL UNIVERSE (Low-Medium severity)
+   48 stocks is a small cross-sectional universe.
+   Planned expansion to Nifty 100 in V4.1.
+
+============================================================
+IC INTERPRETATION GUIDE
+============================================================
+  IC > 0.10 : Excellent
+  IC > 0.05 : Good — meaningful predictive power
+  IC > 0.02 : Marginal
+  IC < 0.02 : Poor

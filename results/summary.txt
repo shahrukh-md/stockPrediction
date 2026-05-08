@@ -1,0 +1,25 @@
+============================================================
+V4 WALK-FORWARD RESULTS SUMMARY
+============================================================
+Total folds      : 120
+Training window  : 36 months (rolling)
+Target           : target_cs_zscore
+Features         : 26
+Portfolio        : Top 10 long / Bottom 10 short
+
+Model              Mean IC     IC>0 %   Hit Rate   L/S Spread  Top10 Ret
+-----------------------------------------------------------------
+  LightGBM           +0.0446      58.3%       0.6%     +0.0079   +0.0275
+  XGBoost            +0.0648      64.2%       0.6%     +0.0144   +0.0309
+  RandomForest       +0.0797      67.5%       0.6%     +0.0179   +0.0320
+  Ensemble           +0.0655      63.3%       0.6%     +0.0137   +0.0301
+
+Nifty benchmark (equal-weight): +0.0238 per month
+
+IC interpretation:
+  IC > 0.10 : Excellent — strong ranking signal
+  IC > 0.05 : Good — meaningful predictive power
+  IC > 0.02 : Marginal — weak but present
+  IC < 0.02 : Poor — model not ranking well
+
+  Your Ensemble IC: +0.0655
