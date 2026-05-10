@@ -1,0 +1,20 @@
+============================================================
+V4 REGIME-AWARE RESULTS
+============================================================
+
+Features        : 37 (26 base + 11 interaction)
+Training window : 24M rolling
+Total folds     : 132
+Regime signals  : avg pairwise corr (60%) + Nifty vol (40%)
+Lookback        : 20 trading days
+
+  LightGBM          +0.0795   65.9%      63.0%  +0.0266    +0.0123  Δ +0.0000
+  XGBoost           +0.0865   68.9%      63.9%  +0.0283    +0.0139  Δ +0.0000
+  RandomForest      +0.0987   69.7%      64.3%  +0.0287    +0.0161  Δ +0.0000
+  Ensemble          +0.0921   67.4%      63.6%  +0.0286    +0.0150  Δ +0.0000
+
+Nifty benchmark: +0.0216/month
+Regime breakdown:
+  normal: 122 months | avg IC: +0.0940
+  elevated: 8 months | avg IC: +0.1101
+  crisis: 2 months | avg IC: -0.0975
